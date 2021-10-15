@@ -1,14 +1,8 @@
-# Project for Erdos Bootcamp
-<<<<<<< HEAD
+## Project for Erdos Bootcamp
 <!---
-Teammeamber names
---->
+Team Member names
 # Yili Zhang 
-=======
+#Alana Huszar
+#Yueqiao Wu
+#Sanal Shivaprasad
 
-Alana Huszar
-<<<<<<< Updated upstream
->>>>>>> e0037be79e9138ca662675316fa837988194a516
-=======
-Yueqiao Wu
->>>>>>> Stashed changes
