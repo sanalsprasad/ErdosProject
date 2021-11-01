@@ -1,7 +1,7 @@
 # CoverMyMeds Project for Erdos Bootcamp
 
 ## Team members
-Alana Huszar
+Alana Huszar  
 Sanal Shivaprasad  
 Yueqiao Wu  
 Yili Zhang  
