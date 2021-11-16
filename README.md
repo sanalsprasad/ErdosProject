@@ -58,10 +58,11 @@ Our project focuses on predicting whether a prior authorization form will be app
 + **Data_exploration** - A notebook for preliminary data exploration on the training data. Includes histograms for each feature, colored by PA approval.
 + **create_csv_clf** - A notebook that creates a CSV for PA approval prediciton purposes (drops date information, one hot encodes Drug and BIN).
 + **PA approval rate visualization** - A notebook that explores the relationship between the combination of different variables and PA approval.
+
 In the models folder, we have a notebook for each model we tuned, and a final notebook comparing them:
 + **AdaBoost**
 + **BernoulliNB**
-+ **Decision Tree*
++ **Decision Tree**
 + **Extra Trees**
 + **Logistic Regression**, creates decision tree .png **pa_form_dec_tree.png**
 + **Random Forest**
