@@ -62,9 +62,9 @@ Our project focuses on predicting whether a prior authorization form will be app
 In the models folder, we have a notebook for each model we tuned, and a final notebook comparing them:
 + **AdaBoost**
 + **BernoulliNB**
-+ **Decision Tree**
++ **Decision Tree**, creates image file **pa_form_dec_tree.png**, first few levels of decision tree.
 + **Extra Trees**
-+ **Logistic Regression**, creates decision tree .png **pa_form_dec_tree.png**
++ **Logistic Regression**
 + **Random Forest**
 + **Voting Classifier**
 + **xgboost**
