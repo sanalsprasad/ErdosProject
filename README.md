@@ -51,11 +51,19 @@ contained on the PA and information contained in the original pharmacy claim can
 us understand whether an ePA is likely to be approved or denied.
 
 ## Our Project
-Our project focuses on predicting whether a prior authorization form will be approved or not for claims that were rejected. Our notebooks are:
+Our project focuses on predicting whether a prior authorization form will be approved or not for claims that were rejected. Our top level notebooks are:
 + **Create main csv** - A notebook creating one table with all information for each claim (merging the database of several csvs).
 + **Data_cleaning** - A notebook to check for missing values in the data, and to check if there are claims identical other than date submitted and PA approval with different outcomes (PA approval).
 + **PA approval and date** - A notebook looking at if there are different PA approval outcomes based on the date the claim was submitted.
 + **Data_exploration** - A notebook for preliminary data exploration on the training data. Includes histograms for each feature, colored by PA approval.
-
-
-
++ **create_csv_clf** - A notebook that creates a CSV for PA approval prediciton purposes (drops date information, one hot encodes Drug and BIN).
++ **PA approval rate visualization** - A notebook that explores the relationship between the combination of different variables and PA approval.
+In the models folder, we have a notebook for each model we tuned, and a final notebook comparing them:
++ **AdaBoost**
++ **BernoulliNB**
++ **Decision Tree*
++ **Extra Trees**
++ **Logistic Regression**, creates decision tree .png **pa_form_dec_tree.png**
++ **Random Forest**
++ **Voting Classifier**
++ **xgboost**
