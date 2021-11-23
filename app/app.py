@@ -12,6 +12,8 @@ st.write("""
 # CoverMyMeds - PA Approval Chances
 """)
 
+st.write("This project was done as part of the Erdos Data Science bootcamp Fall 2021. The data was provided by CoverMyMeds.")
+
 st.header("User Information")
 
 st.write("Please fill in the following information." )
@@ -22,9 +24,9 @@ drug = st.radio("Select the drug that you want covered: ", ("A","B","C"))
 
 tried_failed = st.radio("Have you tried and failed the generic alternative?", ("Yes","No"))
 
-contraindication = st.radio("Contraindication?",("Yes","No"));
+contraindication = st.radio("Do you have an associated contraindication for the medication requested (i.e. is there any reason you cannot take this drug)?",("Yes","No"));
 
-correct_diagnosis = st.radio("Correct diagnosis?",("Yes","No"));
+correct_diagnosis = st.radio("Do you have the corrected diagnosis for the associated drug?",("Yes","No"));
 
 
 # Find reject code:
@@ -70,7 +72,11 @@ reject_code_76 = int(reject_code == 76)
 #Predict
 pred = model.predict_proba([[cd,tf,contra,drug_B,drug_C,bin_417614,bin_417740,bin_999001, reject_code_75, reject_code_76]])
 
+if tf == 0:
+    pred1 = model.predict_proba([[cd,1,contra,drug_B,drug_C,bin_417614,bin_417740,bin_999001, reject_code_75, reject_code_76]])
+
 st.header("Result")
-st.write("The chances of your PA being approved are: {}".format(100*np.round(pred[0,1],5)), "%.")
+st.write("""The chances of your PA being approved are: **{}**""".format(np.round(100*pred[0,1],3)), "%.")
 
-
+if tf == 0:
+    st.write("""In addition, if you first try the generic alternative but still need this drug, then the chances of your PA form being approved are: {}""".format(np.round(100*pred1[0,1],3)), "%.")
