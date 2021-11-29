@@ -68,3 +68,7 @@ In the models folder, we have a notebook for each model we tuned, and a final no
 + **Random Forest**
 + **Voting Classifier**
 + **xgboost**
+
+Finally, also in the model folder, we do a final comparison in **Comparison of Final Models**, which also generates the table **SummaryTable.pdf** and run our final model (decision tree) on our test set. This exported with the **Exporting Final Model** notebook.
+
+Our webapp uses the repository: https://github.com/huszara2/CMMApp, and can be found at https://cmm-narwhal.herokuapp.com/.
